@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+jobs:
+  long-running:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delay
+        run: |
+          sleep 300
+  short-failing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delay
+        run: |
+          sleep 60
+      - name: Fail
+        run: |
+          exit 1
