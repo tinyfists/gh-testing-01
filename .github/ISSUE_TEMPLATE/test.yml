@@ -1,0 +1,19 @@
+name: Extension merge request
+description: Request to merge an extension into the core CLI experience
+title: "[Extension Merge Request]: "
+labels:
+  - extension merge request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > Before submitting this issue, review our [criteria and expectations for merging extensions](docs/hello-world.md).
+
+  - type: input
+    id: extension
+    attributes:
+      label: What is the extension?
+      description: Describe the extension in a few sentences and provide a link to the repo.
+    validations:
+      required: true
